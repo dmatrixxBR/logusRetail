@@ -1,0 +1,57 @@
+unit untMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TfrmMain = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadas1: TMenuItem;
+    ConsultasMdicas1: TMenuItem;
+    Mdicos1: TMenuItem;
+    Pacientes1: TMenuItem;
+    Consultrios1: TMenuItem;
+    Agendamento1: TMenuItem;
+    Pesquisa1: TMenuItem;
+    Sair1: TMenuItem;
+    procedure Mdicos1Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+    procedure openConnections;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMain: TfrmMain;
+
+implementation
+
+{$R *.dfm}
+
+uses untCadMedicos,untData;
+
+procedure TfrmMain.FormActivate(Sender: TObject);
+begin
+ openConnections;
+end;
+
+procedure TfrmMain.Mdicos1Click(Sender: TObject);
+begin
+
+     Application.CreateForm(TfrmMedicos, frmMedicos);
+     frmMedicos.ShowModal;
+     frmMedicos.Release;
+
+end;
+
+procedure TfrmMain.openConnections;
+begin
+dm.FDConnection1.Connected:=true;
+end;
+
+end.

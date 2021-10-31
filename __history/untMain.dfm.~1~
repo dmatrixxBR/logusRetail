@@ -1,0 +1,47 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Teste Logus Retail'
+  ClientHeight = 628
+  ClientWidth = 1052
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 272
+    Top = 80
+    object Cadas1: TMenuItem
+      Caption = '&Cadastros'
+      object Mdicos1: TMenuItem
+        Caption = '&M'#233'dicos'
+      end
+      object Pacientes1: TMenuItem
+        Caption = '&Pacientes'
+      end
+      object Consultrios1: TMenuItem
+        Caption = '&Consult'#243'rios'
+      end
+    end
+    object ConsultasMdicas1: TMenuItem
+      Caption = 'C&onsultas M'#233'dicas'
+      object Agendamento1: TMenuItem
+        Caption = '&Agendamento'
+      end
+      object Pesquisa1: TMenuItem
+        Caption = 'Pes&quisa'
+      end
+    end
+    object Sair1: TMenuItem
+      Caption = '&Sair'
+    end
+  end
+end

@@ -1,0 +1,18 @@
+program PrjLogus;
+
+uses
+  Vcl.Forms,
+  untMain in 'untMain.pas' {frmMain},
+  untData in 'untData.pas' {DM: TDataModule},
+  untCadPadrao in 'untCadPadrao.pas' {frmMedicos};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TfrmMedicos, frmMedicos);
+  Application.Run;
+end.
